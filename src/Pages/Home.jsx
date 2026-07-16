@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async"
 import { Github, Linkedin, Mail, ExternalLink, Instagram, Sparkles } from "lucide-react"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import NodesAnimation from "../components/NodesAnimation"
 
 const StatusBadge = memo(() => (
   <div className="inline-block animate-float lg:mx-0" data-aos="zoom-in" data-aos-delay="400">
@@ -212,32 +213,27 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Right Column - WebM Video */}
+              {/* Right Column - Nodes Connect Animation (interactive canvas) */}
               <div className="w-full py-0 md:py-[10%] sm:py-0 lg:w-1/2 h-[260px] sm:h-[400px] lg:h-[600px] xl:h-[750px] relative flex items-center justify-center order-2 lg:order-2  mt-5 sm:mt-0"
                 onMouseEnter={() => setIsHovering(true)}
                 onMouseLeave={() => setIsHovering(false)}
                 data-aos="fade-left"
                 data-aos-delay="600">
-                <div className="relative w-full opacity-90">
+                <div className="relative w-full h-full opacity-90">
+                  {/* Glow background */}
                   <div className={`absolute inset-0 bg-gradient-to-r from-[#6366f1]/10 to-[#a855f7]/10 rounded-3xl blur-3xl transition-all duration-700 ease-in-out ${
                     isHovering ? "opacity-50 scale-105" : "opacity-20 scale-100"
                   }`}>
                   </div>
 
-                  <div className={`relative lg:left-12 z-10 w-full opacity-90 transform transition-transform duration-500 ${
+                  {/* Nodes Canvas */}
+                  <div className={`relative z-10 w-full h-full transform transition-transform duration-500 ${
                     isHovering ? "scale-105" : "scale-100"
                   }`}>
-                    <img
-                      src="Animation1.gif"
-                      alt="Developer Animation"
-                      className={`w-full h-full object-contain transition-all duration-500 ${
-                        isHovering 
-                          ? "scale-[95%] sm:scale-[90%] md:scale-[90%] lg:scale-[90%] rotate-2" 
-                          : "scale-[90%] sm:scale-[80%] md:scale-[80%] lg:scale-[80%]"
-                      }`}
-                    />
+                    <NodesAnimation className="rounded-2xl" />
                   </div>
 
+                  {/* Ambient pulse */}
                   <div className={`absolute inset-0 pointer-events-none transition-all duration-700 ${
                     isHovering ? "opacity-50" : "opacity-20"
                   }`}>
