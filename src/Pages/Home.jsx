@@ -76,12 +76,12 @@ const SocialLink = memo(({ icon: Icon, link, label }) => (
 const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
-const WORDS = ["Network & Telecom Student", "Tech Enthusiast"];
-const TECH_STACK = ["React", "Javascript", "Node.js", "Tailwind"];
+const WORDS = ["Network & Telecom Student", "Robotics Enthusiast"];
+const TECH_STACK = ["React", "Python", "ROS2", "C++"];
 const SOCIAL_LINKS = [
-  { icon: Github, link: "https://github.com/EkiZR", label: "GitHub Profile" },
-  { icon: Linkedin, link: "https://www.linkedin.com/in/ekizr/", label: "LinkedIn Profile" },
-  { icon: Instagram, link: "https://www.instagram.com/ekizr_/?hl=id", label: "Instagram Profile" }
+  { icon: Github, link: "https://github.com/hisyamyasidp", label: "GitHub Profile" },
+  { icon: Linkedin, link: "https://www.linkedin.com/in/hisyamyasidp/", label: "LinkedIn Profile" },
+  { icon: Instagram, link: "https://www.instagram.com/hsymptw._/", label: "Instagram Profile" }
 ];
 
 const Home = () => {
@@ -140,25 +140,24 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Eki Zulfar Rachman — Frontend Web Developer</title>
-        <meta name="description" content="Website resmi Eki Zulfar Rachman, Front-End Web Developer. Saya berfokus pada penciptaan pengalaman digital yang menarik dan selalu berupaya memberikan solusi terbaik dalam setiap proyek yang saya kerjakan." />
-     <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://ekizr.com" />
-        <meta property="og:title" content="Eki Zulfar Rachman — Frontend Web Developer" />
-     <meta property="og:description" content="Website resmi dan portofolio Eki Zulfar Rachman, Front-End Web Developer." />
-        <meta property="og:url" content="https://ekizr.com" />
+        <title>Hisyam Yasid Pradana — Network & Telecom Student</title>
+        <meta name="description" content="Portfolio resmi Hisyam Yasid Pradana, Network & Telecom Student dengan keahlian di Robotics, IoT, dan Web Development. Menciptakan solusi teknologi yang inovatif." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://hisyamyasidp.github.io/PortoPagesV2/" />
+        <meta property="og:title" content="Hisyam Yasid Pradana — Network & Telecom Student" />
+        <meta property="og:description" content="Portfolio resmi Hisyam Yasid Pradana, Network & Telecom Student. Robotics, IoT, Web Development." />
+        <meta property="og:url" content="https://hisyamyasidp.github.io/PortoPagesV2/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{`
           {
             "@context": "https://schema.org",
             "@type": "Person",
-            "name": "Eki Zulfar Rachman",
-            "jobTitle": "Frontend Developer",
-            "url": "https://ekizr.com",
+            "name": "Hisyam Yasid Pradana",
+            "jobTitle": "Network & Telecom Student",
+            "url": "https://hisyamyasidp.github.io/PortoPagesV2/",
             "sameAs": [
-              "https://github.com/EkiZR",
-              "https://www.linkedin.com/in/ekizr/",
-              "https://www.instagram.com/ekizr_/"
+              "https://github.com/hisyamyasidp",
+              "https://www.instagram.com/hsymptw._/"
             ]
           }
         `}</script>
@@ -188,7 +187,7 @@ const Home = () => {
                   <p className="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed font-light"
                     data-aos="fade-up"
                     data-aos-delay="1000">
-                    Menciptakan Website Yang Inovatif, Fungsional, dan User-Friendly untuk Solusi Digital.
+                    Mahasiswa Teknik Jaringan & Telekomunikasi yang passionate di Robotics, IoT, dan Web Development.
                   </p>
 
                   {/* Tech Stack */}

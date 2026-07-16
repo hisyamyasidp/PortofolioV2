@@ -1,0 +1,147 @@
+// =============================================
+// STATIC PORTFOLIO DATA (No external API)
+// Data diambil dari GitHub: hisyamyasidp
+// =============================================
+
+export const projects = [
+  {
+    id: 1,
+    Title: "Portfolio V2",
+    Description:
+      "Personal portfolio website built with React, Vite, and Tailwind CSS. Features smooth animations, dark theme, and responsive design for showcasing projects and skills.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/PortofolioV2",
+    Link: "https://github.com/hisyamyasidp/PortofolioV2",
+    slug: "portfolio-v2",
+    tags: ["React", "Vite", "TailwindCSS"],
+  },
+  {
+    id: 2,
+    Title: "3-DoF Arm Simulation",
+    Description:
+      "Interactive 3-DoF robotic arm simulation with ESP32-based control, designed for robotics learning and visualization. Features real-time joint control and inverse kinematics.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/3-DoF-Arm-Simulation",
+    Link: "https://github.com/hisyamyasidp/3-DoF-Arm-Simulation",
+    slug: "3-dof-arm-simulation",
+    tags: ["HTML", "JavaScript", "ESP32", "Robotics"],
+  },
+  {
+    id: 3,
+    Title: "Nodes Connect Animation",
+    Description:
+      "Beautiful interactive particle network animation using Canvas API. Nodes dynamically connect based on proximity, creating a living neural-network visual effect.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/Nodes-Connect-Animation",
+    Link: "https://github.com/hisyamyasidp/Nodes-Connect-Animation",
+    slug: "nodes-connect-animation",
+    tags: ["JavaScript", "Canvas API", "Animation"],
+  },
+  {
+    id: 4,
+    Title: "Object Counter TCS34725",
+    Description:
+      "Object counting system using TCS34725 color sensor with a web-based dashboard. Detects and counts objects by color in real-time using ESP32 microcontroller.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/Object-Counter-TCS34725",
+    Link: "https://github.com/hisyamyasidp/Object-Counter-TCS34725",
+    slug: "object-counter-tcs34725",
+    tags: ["HTML", "JavaScript", "IoT", "ESP32"],
+  },
+  {
+    id: 5,
+    Title: "Conveyor Sorter System",
+    Description:
+      "Automated conveyor belt sorter system using Arduino/ESP32. Sorts objects by color or size using sensors and servo motors, with real-time monitoring interface.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/Conveyor-Sorter-System",
+    Link: "https://github.com/hisyamyasidp/Conveyor-Sorter-System",
+    slug: "conveyor-sorter-system",
+    tags: ["C++", "Arduino", "IoT", "Automation"],
+  },
+  {
+    id: 6,
+    Title: "Rviz STL ROS2",
+    Description:
+      "ROS2 package for visualizing custom STL 3D models in RViz2. Enables loading and rendering of arbitrary STL mesh files as markers in the Robot Operating System environment.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/Rviz-STL-ROS2",
+    Link: "https://github.com/hisyamyasidp/Rviz-STL-ROS2",
+    slug: "rviz-stl-ros2",
+    tags: ["Python", "ROS2", "Robotics", "3D"],
+  },
+  {
+    id: 7,
+    Title: "Arm Elpan",
+    Description:
+      "Robotic arm display project for UKM (University Club) 2025. Features a Python-controlled robotic arm with visual feedback, designed for exhibition and demonstration purposes.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/Arm-Elpan",
+    Link: "https://github.com/hisyamyasidp/Arm-Elpan",
+    slug: "arm-elpan",
+    tags: ["Python", "Robotics", "Servo", "Display"],
+  },
+  {
+    id: 8,
+    Title: "Portfolio V1",
+    Description:
+      "First version of personal portfolio website. A clean, minimal design showcasing projects, skills, and contact information. Built as a learning project for web development.",
+    Img: "https://opengraph.githubassets.com/1/hisyamyasidp/Portofolio",
+    Link: "https://github.com/hisyamyasidp/Portofolio",
+    slug: "portfolio-v1",
+    tags: ["JavaScript", "HTML", "CSS"],
+  },
+];
+
+export const certificates = [
+  {
+    id: 1,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Tensorflow_logo.svg/230px-Tensorflow_logo.svg.png",
+    Title: "Machine Learning Fundamentals",
+    Issuer: "Dicoding Indonesia",
+  },
+  {
+    id: 2,
+    Img: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/512px-HTML5_logo_and_wordmark.svg.png",
+    Title: "Web Development with HTML & CSS",
+    Issuer: "Dicoding Indonesia",
+  },
+  {
+    id: 3,
+    Img: "/sertifikat_course_653_2707515_130126205703.pdf",
+    Title: "JavaScript Programming",
+    Issuer: "Dicoding Indonesia",
+  },
+];
+
+export const staticComments = [
+  {
+    id: 1,
+    user_name: "Reza F.",
+    content:
+      "Mantap portfolionya! Projectnya keren-keren, terutama yang robotics. Keep it up!",
+    created_at: "2026-07-10T08:30:00Z",
+    profile_image: null,
+    is_pinned: true,
+  },
+  {
+    id: 2,
+    user_name: "Dinda A.",
+    content:
+      "Wow, suka banget sama animasi di sini. Smooth banget! Sukses terus ya 🔥",
+    created_at: "2026-07-12T14:22:00Z",
+    profile_image: null,
+    is_pinned: false,
+  },
+  {
+    id: 3,
+    user_name: "Budi S.",
+    content:
+      "Impressive work on the 3-DoF arm simulation! The ESP32 integration looks very clean.",
+    created_at: "2026-07-13T09:15:00Z",
+    profile_image: null,
+    is_pinned: false,
+  },
+  {
+    id: 4,
+    user_name: "Ayu R.",
+    content:
+      "Portfolio yang sangat profesional! Desainnya modern dan elegan. Inspiratif banget 👏",
+    created_at: "2026-07-14T16:45:00Z",
+    profile_image: null,
+    is_pinned: false,
+  },
+];

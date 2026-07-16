@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import React, { useState, lazy, Suspense } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import "./index.css";
@@ -8,10 +8,6 @@ import About from "./Pages/About";
 import AnimatedBackground from "./components/Background";
 import { AnimatePresence } from "framer-motion";
 import Footer from "./components/Footer";
-
-import Login from "./Pages/Login";
-import Dashboard from "./Pages/Dashboard";
-import ProtectedRoute from "./components/ProtectedRoute";
 
 const Portofolio = lazy(() => import("./Pages/Portofolio"));
 const ContactPage = lazy(() => import("./Pages/Contact"));
@@ -60,12 +56,11 @@ function App() {
   const [showWelcome, setShowWelcome] = useState(true);
 
   return (
-    
     <HelmetProvider>
       <div className="pointer-events-none">
-  <AnimatedBackground />
-</div>
-      <BrowserRouter>
+        <AnimatedBackground />
+      </div>
+      <HashRouter>
         <Routes>
           {/* PUBLIC */}
           <Route
@@ -80,19 +75,6 @@ function App() {
 
           <Route path="/project/:slug" element={<ProjectPageLayout />} />
 
-          {/* AUTH */}
-          <Route path="/login" element={<Login />} />
-
-          {/* ADMIN (PROTECTED) */}
-          <Route
-            path="/dashboard/*"
-            element={
-              <ProtectedRoute>
-                <Dashboard />
-              </ProtectedRoute>
-            }
-          />
-
           {/* 404 */}
           <Route
             path="*"
@@ -103,7 +85,7 @@ function App() {
             }
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </HelmetProvider>
   );
 }
