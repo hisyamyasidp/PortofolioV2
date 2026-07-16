@@ -35,12 +35,12 @@ const NodesAnimation = ({ className = "" }) => {
     let shapeOffsetX = 0, shapeOffsetY = 0;
     let shapeVelX = 0, shapeVelY = 0;
     let originalCenterX = 0, originalCenterY = 0;
-    const SPRING_STRENGTH = 0.5;
-    const SPRING_DAMPING = 0.10;
-    const MAX_DRIFT = 300;
+    const SPRING_STRENGTH = 0.01;
+    const SPRING_DAMPING = 0.005;
+    const MAX_DRIFT = 100;
 
     const STRETCH_AMOUNT = 5;
-    const STRETCH_SPEED_CAP = 300;
+    const STRETCH_SPEED_CAP = 30;
 
     const NODE_SPRING_STRENGTH = 0.65;
     const NODE_DAMPING = 0.2;
