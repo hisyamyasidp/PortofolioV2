@@ -24,20 +24,20 @@ const NodesAnimation = ({ className = "" }) => {
     let isDestroyed = false;
 
     // === CONFIG (sama persis dari main.js kamu) ===
-    const SENSITIVITY = 140;
+    const SENSITIVITY = 100;        // radius garis antar node
     const SIBLINGS_LIMIT = 7;
-    const DENSITY = 70;
-    const ANCHOR_LENGTH = 24;
-    const MOUSE_RADIUS = 220;
-    const CENTER_AREA_RATIO = 0.55;
-    const HEX_SIZE = 64;
+    const DENSITY = 50;             // kepadatan node
+    const ANCHOR_LENGTH = 15;       // jarak sebaran titik
+    const MOUSE_RADIUS = 150;       // area terang karena kursor
+    const CENTER_AREA_RATIO = 0.45; // ukuran shape (lebih kecil biar muat di kotak)
+    const HEX_SIZE = 45;            // ukuran grid hexagon
 
     let shapeOffsetX = 0, shapeOffsetY = 0;
     let shapeVelX = 0, shapeVelY = 0;
     let originalCenterX = 0, originalCenterY = 0;
-    const SPRING_STRENGTH = 0.12;   // lebih rendah = gerakan lebih lambat & smooth
-    const SPRING_DAMPING = 0.28;    // lebih tinggi = lebih cepat berhenti, tidak boing
-    const MAX_DRIFT = 300;
+    const SPRING_STRENGTH = 0.15;   
+    const SPRING_DAMPING = 0.35;    
+    const MAX_DRIFT = 60;           // batas maksimum ngejar kursor (supaya ga keluar batas)
 
     const STRETCH_AMOUNT = 5;
     const STRETCH_SPEED_CAP = 30;
