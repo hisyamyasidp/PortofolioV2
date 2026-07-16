@@ -143,10 +143,10 @@ const Home = () => {
         <title>Hisyam Yasid Pradana — Network & Telecom Student</title>
         <meta name="description" content="Portfolio resmi Hisyam Yasid Pradana, Network & Telecom Student dengan keahlian di Robotics, IoT, dan Web Development. Menciptakan solusi teknologi yang inovatif." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://hisyamyasidp.github.io/PortoPagesV2/" />
+        <link rel="canonical" href="https://hisyamyasidp.github.io/PortofolioV2/" />
         <meta property="og:title" content="Hisyam Yasid Pradana — Network & Telecom Student" />
         <meta property="og:description" content="Portfolio resmi Hisyam Yasid Pradana, Network & Telecom Student. Robotics, IoT, Web Development." />
-        <meta property="og:url" content="https://hisyamyasidp.github.io/PortoPagesV2/" />
+        <meta property="og:url" content="https://hisyamyasidp.github.io/PortofolioV2/" />
         <meta property="og:type" content="website" />
         <script type="application/ld+json">{`
           {
@@ -154,7 +154,7 @@ const Home = () => {
             "@type": "Person",
             "name": "Hisyam Yasid Pradana",
             "jobTitle": "Network & Telecom Student",
-            "url": "https://hisyamyasidp.github.io/PortoPagesV2/",
+            "url": "https://hisyamyasidp.github.io/PortofolioV2/",
             "sameAs": [
               "https://github.com/hisyamyasidp",
               "https://www.instagram.com/hsymptw._/"
