@@ -35,16 +35,16 @@ const NodesAnimation = ({ className = "" }) => {
     let shapeOffsetX = 0, shapeOffsetY = 0;
     let shapeVelX = 0, shapeVelY = 0;
     let originalCenterX = 0, originalCenterY = 0;
-    const SPRING_STRENGTH = 0.01;
-    const SPRING_DAMPING = 0.005;
-    const MAX_DRIFT = 100;
+    const SPRING_STRENGTH = 0.12;   // lebih rendah = gerakan lebih lambat & smooth
+    const SPRING_DAMPING = 0.28;    // lebih tinggi = lebih cepat berhenti, tidak boing
+    const MAX_DRIFT = 300;
 
     const STRETCH_AMOUNT = 5;
     const STRETCH_SPEED_CAP = 30;
 
-    const NODE_SPRING_STRENGTH = 0.65;
-    const NODE_DAMPING = 0.2;
-    const WOBBLE_AMOUNT = 5;
+    const NODE_SPRING_STRENGTH = 0.22;  // lebih rendah = node tidak over-shoot
+    const NODE_DAMPING = 0.38;           // lebih tinggi = berhenti lebih cepat
+    const WOBBLE_AMOUNT = 1.5;           // dikurangi biar tidak goyang berlebihan
 
     const NOISE_AMOUNT = 50;
     const NOISE_SPEED_MIN = 0.6;
