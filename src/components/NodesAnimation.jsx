@@ -22,22 +22,23 @@ const NodesAnimation = ({ className = "" }) => {
     let NODE_QUANTITY = 0;
     let animFrameId;
     let isDestroyed = false;
+    let isMouseInside = false;
 
     // === CONFIG (sama persis dari main.js kamu) ===
-    const SENSITIVITY = 100;        // radius garis antar node
-    const SIBLINGS_LIMIT = 7;
+    const SENSITIVITY = 90;         // radius garis antar node
+    const SIBLINGS_LIMIT = 6;
     const DENSITY = 50;             // kepadatan node
-    const ANCHOR_LENGTH = 15;       // jarak sebaran titik
-    const MOUSE_RADIUS = 150;       // area terang karena kursor
-    const CENTER_AREA_RATIO = 0.45; // ukuran shape (lebih kecil biar muat di kotak)
-    const HEX_SIZE = 45;            // ukuran grid hexagon
+    const ANCHOR_LENGTH = 10;       // jarak sebaran titik
+    const MOUSE_RADIUS = 120;       // area terang karena kursor
+    const CENTER_AREA_RATIO = 0.35; // ukuran shape (lebih kecil biar muat di kotak)
+    const HEX_SIZE = 35;            // ukuran grid hexagon
 
     let shapeOffsetX = 0, shapeOffsetY = 0;
     let shapeVelX = 0, shapeVelY = 0;
     let originalCenterX = 0, originalCenterY = 0;
     const SPRING_STRENGTH = 0.15;   
     const SPRING_DAMPING = 0.35;    
-    const MAX_DRIFT = 60;           // batas maksimum ngejar kursor (supaya ga keluar batas)
+    const MAX_DRIFT = 40;           // batas maksimum ngejar kursor
 
     const STRETCH_AMOUNT = 5;
     const STRETCH_SPEED_CAP = 30;
@@ -86,7 +87,7 @@ const NodesAnimation = ({ className = "" }) => {
         ctx.moveTo(this.x, this.y);
         ctx.lineTo(partner.x, partner.y);
         ctx.lineWidth = 1.5 - dist / SENSITIVITY;
-        ctx.strokeStyle = "rgba(160, 130, 255, " + alpha + ")";
+        ctx.strokeStyle = "rgba(255, 255, 255, " + (alpha * 0.6) + ")"; // Ganti dari ungu ke putih/abu
         ctx.stroke();
       }
     };
@@ -192,8 +193,10 @@ const NodesAnimation = ({ className = "" }) => {
       lastTime = now;
 
       // Shape chase spring
-      const mdx = mouse.x - (originalCenterX + shapeOffsetX);
-      const mdy = mouse.y - (originalCenterY + shapeOffsetY);
+      const targetShapeX = isMouseInside ? mouse.x : originalCenterX;
+      const targetShapeY = isMouseInside ? mouse.y : originalCenterY;
+      const mdx = targetShapeX - (originalCenterX + shapeOffsetX);
+      const mdy = targetShapeY - (originalCenterY + shapeOffsetY);
       const dist = Math.hypot(mdx, mdy);
       const pull = Math.min(dist, MAX_DRIFT) / (dist || 1);
       const ax = mdx * pull * SPRING_STRENGTH;
@@ -226,15 +229,16 @@ const NodesAnimation = ({ className = "" }) => {
 
     // === EVENTS ===
     const onMouseMove = (e) => {
+      isMouseInside = true;
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.clientX - rect.left;
       mouse.y = e.clientY - rect.top;
     };
     const onMouseLeave = () => {
-      mouse.x = -9999;
-      mouse.y = -9999;
+      isMouseInside = false;
     };
     const onTouchMove = (e) => {
+      isMouseInside = true;
       const rect = canvas.getBoundingClientRect();
       mouse.x = e.touches[0].clientX - rect.left;
       mouse.y = e.touches[0].clientY - rect.top;
